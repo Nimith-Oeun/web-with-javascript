@@ -1,0 +1,318 @@
+h1,h2,h4,ul,p {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.menu-bar{
+    background-color: rgb(55, 55, 211);
+}
+.menu ul{
+    display: flex;
+}
+
+.menu ul li a{
+    display: block;
+    padding: 15px;
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+}
+.menu ul li a:hover{
+    background-color: rgb(102, 102, 219);
+}
+
+.menu ul li{
+    position: relative;
+}
+.menu ul li .sub-menu{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 300px;
+    flex-direction: column;
+    background-color: rgb(44, 44, 153);
+    display: none;
+    z-index: 99;
+}
+.menu ul li:hover .sub-menu{
+    display: flex;
+}
+
+.drawBar{
+    width: 40%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: -40%;
+    background-color:rgb(55, 55, 211) ;
+    box-shadow: 1px 1px 8px dimgray;
+    transition: 0.3s;
+    z-index: 100;
+}
+
+.drawBar ul li a{
+    display: block;
+    padding: 20px;
+    font-size: 15px;
+    text-decoration: none;
+    color: white;
+}
+.drawBar ul li a:hover{
+    background-color: rgb(102, 102, 219);
+}
+.popup{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.425);
+}
+
+.left-menu{
+    height: 600px;
+    overflow: auto;
+}
+.left-menu ul {
+    background-color:  rgb(55, 55, 211);
+}
+.left-menu ul li a{
+    display: flex;
+    padding: 15px;
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    justify-content: space-between;
+}
+.left-menu ul li a:hover{
+    background-color: rgb(102, 102, 219);
+}
+
+.left-menu ul li  .sub-menu{
+    width: 90%;
+    margin-left: 5%;
+    background-color:rgb(44, 44, 153);
+    box-shadow: 1px 1px 8px dimgray;
+}
+/* .left-menu ul li:hover .sub-menu{
+    display: flex;
+    flex-direction: column;
+} */
+
+.slide-container{
+    height: 600px;
+    padding: 0;
+}
+
+.slide-container .slide-box{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(238, 149, 140);
+    display: flex;
+    position: relative;
+}
+.slide-container .slide{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    position: relative;
+   
+}
+.slide-container .slide span{
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  background-color: salmon;
+  color: white;
+  /* font-size: 12px; */
+  padding: 6px;
+  border-radius: 9px;
+
+
+}
+
+.slide-container .slide img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.slide-container .btnSlide{
+    position: absolute;
+    top: 50%;
+    transform: translate(0,-50%);
+    color: white;
+    background-color: brown;
+    padding: 10px;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 12px;
+}
+.slide-container .btnNext{
+    right: 30px;
+    z-index: 99;
+}
+
+.slide-container .btnBack{
+    left: 30px;
+    z-index: 99;
+}
+.slide-container .slide-box ul{
+    position: absolute;
+    bottom: 9px;
+    left: 50%;
+    display: flex;
+    transform: translate(-50%,0);
+    background-color: aquamarine;
+    padding: 5px;
+    gap: 6px;
+    border-radius: 10px;
+    z-index: 99;
+}
+.slide-container .slide-box ul li{
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    display: flex;
+    background-color: aqua;
+    border-radius: 50%;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+   
+}.slide-container .slide-box ul li:hover{
+    background-color: salmon;
+    color: yellow;
+}
+
+.slide-container .slide-box ul li.active{
+    background-color: black;
+    color: white;
+}
+
+.img-box{
+    margin-top: 10px;
+    height: 360px;
+    /* margin-bottom: 100px; */
+}
+.img-box .box{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(226, 223, 223);
+}
+.img-box .box img{
+    width: 50%;
+    height: 50%;
+    object-fit: cover;
+    float: left;
+    border: 1px solid rgb(102, 102, 219);
+}
+
+.friend-box{
+    position: fixed;
+    bottom: 7px;
+    right: 9px;
+    width: 300px;
+    height: 500px;
+    background-color: salmon;
+    z-index: 100;
+}
+.friend-box h1{
+    color: white;
+    height: 39px;
+    font-size: 18px;
+    display: flex;
+    background-color: saddlebrown;
+    align-items: center;
+    padding-left: 9px;
+    cursor: pointer;
+}
+.friend-box ul li{
+    padding: 7px;
+}
+.friend-box ul li img{
+    width: 35px;
+    object-fit: cover;
+    border-radius: 50%;
+    background-color: black;
+}
+
+.chat-container{
+    position:fixed;
+    bottom: 9px;
+    right: 360px;
+    z-index: 200;
+    display: flex;
+    gap: 10px;
+}
+.chat-box{
+    width: 300px;
+    height: 390px;
+    background-color: salmon;
+    box-shadow: 1px 1px 8px rgb(153, 150, 150);
+    border-radius: 7px;
+
+}
+.chat-box .header{
+    width: 100%;
+    height: 39px;
+    background-color: saddlebrown;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding-left: 6px;
+    position: relative;
+}
+.chat-box .header img{
+    width: 35px;
+    height: 35px;
+    object-fit: cover;
+    border-radius: 50%;
+    background-color: black;
+}
+.chat-box .header span{
+    color: white;
+}
+.chat-box .header i{
+    position: absolute;
+    right: 9px;
+    top: 25%;
+    color: white;
+    cursor: pointer;
+}
+
+.swiper{
+    height: 500px;
+}
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* for make placeholder in select box */
+  option[value=""] {
+    display: none;
+}
+.form-control{
+    text-align: center;
+    font-weight: bold;
+}
